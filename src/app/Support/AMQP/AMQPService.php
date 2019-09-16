@@ -243,7 +243,7 @@ class AMQPService
                 [
                     'content_type'  => 'application/json',
                     'delivery_mode' => AMQPMessage::DELIVERY_MODE_PERSISTENT,
-                    'priority'      => in_array($priority, range(1, 10)) ? $priority : 1 // ask Mildo for it
+                    'priority'      => in_array($priority, range(1, 10)) ? $priority : 1
                 ]);
 
             $this->channel->basic_publish($message, $this->exchangeName, $this->routingKey);
@@ -274,8 +274,6 @@ class AMQPService
                 $service->process($message);
 
                 $message->delivery_info['channel']->basic_ack($message->delivery_info['delivery_tag']);
-            } catch (SystemException $exception) {
-                $message->delivery_info['channel']->basic_nack($message->delivery_info['delivery_tag']);
             } catch (Exception $exception) {
                 $message->delivery_info['channel']->basic_nack($message->delivery_info['delivery_tag']);
             }
@@ -286,7 +284,7 @@ class AMQPService
         };
 
         if (! $this->consumerTag) {
-            $this->consumerTag = 'deanone-default-consumer';
+            $this->consumerTag = 'default-consumer';
         }
 
         $this->channel->basic_consume($this->queueName, $this->consumerTag, false, false, false, false, $consumeCallback);

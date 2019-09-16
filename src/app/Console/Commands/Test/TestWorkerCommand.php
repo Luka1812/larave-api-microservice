@@ -1,11 +1,13 @@
 <?php
 
-namespace App\Console\Commands;
+namespace App\Console\Commands\Test;
 
+use Exception;
 use Illuminate\Console\Command;
 use Psr\Log\LoggerInterface;
+use App\Services\OneView\TestWorkerService;
 
-class TestWorker extends Command
+class TestWorkerCommand extends Command
 {
     /**
      * The name and signature of the console command.
@@ -29,16 +31,25 @@ class TestWorker extends Command
     private $log;
 
     /**
+     * The TestWorkerService instance
+     *
+     * @var \App\Services\OneView\TestWorkerService
+     */
+    private $testWorkerService;
+
+    /**
      * Create a new console command instance.
      *
      * @param \Psr\Log\LoggerInterface $log
+     * @param \App\Services\OneView\TestWorkerService $testWorkerService
      * @return void
      */
-    public function __construct(LoggerInterface $log)
+    public function __construct(LoggerInterface $log, TestWorkerService $testWorkerService)
     {
         parent::__construct();
 
-        $this->log = $log;
+        $this->log               = $log;
+        $this->testWorkerService = $testWorkerService;
     }
 
     /**
@@ -49,11 +60,18 @@ class TestWorker extends Command
     public function handle() : void
     {
         $startMessage = 'The test:worker has started!';
+
         $this->info($startMessage);
         $this->log->info($startMessage);
 
+        try {
+            $this->testWorkerService->handle();
+        } catch (Exception $exception) {
+            // TODO: Log exception message.
+        }
 
         $finishMessage = 'The test:worker has ended!';
+
         $this->info($finishMessage);
         $this->log->info($finishMessage);
 
