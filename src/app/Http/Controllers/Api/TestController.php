@@ -2,13 +2,16 @@
 
 namespace App\Http\Controllers\Api;
 
+use Symfony\Component\HttpFoundation\Response;
+use Illuminate\Http\JsonResponse;
+
 class TestController extends Controller
 {
     /**
-     * @return string
+     * @return Illuminate\Http\JsonResponse
      */
-    public function index() : string
+    public function index() : JsonResponse
     {
-        return "Hello world";
+        return new JsonResponse(['Hello World'], Response::HTTP_OK);
     }
 }
