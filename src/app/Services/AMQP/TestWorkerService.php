@@ -4,7 +4,7 @@ namespace App\Services\OneView;
 
 use Illuminate\Config\Repository as Config;
 use App\Support\AMQP\AMQPService;
-use App\Services\Business\TestService;
+use App\Services\Business\TestConsumeService;
 
 class TestWorkerService
 {
@@ -16,9 +16,9 @@ class TestWorkerService
     private $config;
 
     /**
-     * The TestService instance
+     * The TestConsumeService instance
      *
-     * @var \App\Services\Business\TestService
+     * @var \App\Services\Business\TestConsumeService
      */
     private $testService;
 
@@ -26,9 +26,9 @@ class TestWorkerService
      * Create a new console command instance.
      *
      * @param \Illuminate\Config\Repository as Config $config
-     * @param \App\Services\Business\TestService $testService
+     * @param \App\Services\Business\TestConsumeService $testService
      */
-    public function __construct(Config $config, TestService $testService)
+    public function __construct(Config $config, TestConsumeService $testService)
     {
         $this->config      = $config;
         $this->testService = $testService;
@@ -36,6 +36,8 @@ class TestWorkerService
 
     /**
      * Process the message
+     *
+     * @throws \Throwable
      */
     public function handle()
     {

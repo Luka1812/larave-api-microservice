@@ -2,11 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6c10a700-a6b1-4690-9967-c2886943773f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/app/Services/AMQP/TestWorkerService.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/Services/Business/TestService.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/Mapper/Mapper.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/Services/AMQP/TestSenderService.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/Services/Business/TestSendService.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/Console/Commands/TestWorker.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Console/Commands/Test/TestWorkerCommand.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/Support/AMQP/AMQPService.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Support/AMQP/AMQPService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/src/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/Services/AMQP/TestWorkerService.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Services/AMQP/TestWorkerService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/Services/Business/TestService.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Services/Business/TestConsumeService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/User.php" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -23,18 +26,6 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/app/Http/Controllers/Api/TestController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="384">
-              <caret line="16" column="1" lean-forward="true" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
-              <folding>
-                <element signature="e#44#90#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/app/Console/Commands/Test/TestWorkerCommand.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="706">
@@ -47,10 +38,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/app/Services/Business/TestService.php">
+        <entry file="file://$PROJECT_DIR$/src/app/Services/Business/TestConsumeService.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="312">
-              <caret line="13" column="1" lean-forward="true" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
+            <state relative-caret-position="288">
+              <caret line="12" column="5" lean-forward="true" selection-end-line="13" selection-end-column="1" />
               <folding>
                 <element signature="e#41#90#0#PHP" expanded="true" />
               </folding>
@@ -58,11 +49,59 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="744">
+              <caret line="31" column="8" lean-forward="true" selection-start-line="31" selection-start-column="8" selection-end-line="31" selection-end-column="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/app/Services/AMQP/TestSenderService.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="537">
+              <caret line="46" column="25" lean-forward="true" selection-start-line="46" selection-start-column="7" selection-end-line="46" selection-end-column="25" />
+              <folding>
+                <element signature="e#37#70#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/app/Services/Business/TestSendService.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="288">
+              <caret line="12" column="1" lean-forward="true" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/app/Support/AMQP/AMQPSendMessageInterface.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="96">
+              <caret line="4" column="10" selection-start-line="4" selection-start-column="10" selection-end-line="4" selection-end-column="10" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/app/Mapper/Mapper.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="96">
+              <caret line="4" column="10" selection-start-line="4" selection-start-column="10" selection-end-line="4" selection-end-column="10" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/app/Services/AMQP/TestWorkerService.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="146">
-              <caret line="31" column="5" lean-forward="true" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
+            <state relative-caret-position="549">
+              <caret line="36" column="7" lean-forward="true" selection-start-line="36" selection-start-column="7" selection-end-line="36" selection-end-column="7" />
               <folding>
                 <element signature="e#40#83#0#PHP" expanded="true" />
               </folding>
@@ -88,30 +127,6 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/app/Services/MessageLogService.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret selection-end-line="13" selection-end-column="1" />
-              <folding>
-                <element signature="e#32#62#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/resources/lang/en/enums.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
-              <folding>
-                <element signature="e#7#46#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="Git.Settings">
@@ -125,9 +140,14 @@
         <option value="$PROJECT_DIR$/src/app/Services/Test/TestService.php" />
         <option value="$PROJECT_DIR$/src/app/Console/Commands/TestWorker.php" />
         <option value="$PROJECT_DIR$/src/app/Services/Business/TestService.php" />
-        <option value="$PROJECT_DIR$/src/app/Services/AMQP/TestWorkerService.php" />
         <option value="$PROJECT_DIR$/src/app/Support/AMQP/AMQPService.php" />
         <option value="$PROJECT_DIR$/src/app/Console/Commands/Test/TestWorkerCommand.php" />
+        <option value="$PROJECT_DIR$/src/.gitignore" />
+        <option value="$PROJECT_DIR$/src/app/Mapper/Mapper.php" />
+        <option value="$PROJECT_DIR$/src/app/Services/AMQP/SendMessageService.php" />
+        <option value="$PROJECT_DIR$/src/app/Services/Business/TestSendService.php" />
+        <option value="$PROJECT_DIR$/src/app/Services/AMQP/TestSenderService.php" />
+        <option value="$PROJECT_DIR$/src/app/Services/AMQP/TestWorkerService.php" />
       </list>
     </option>
   </component>
@@ -281,17 +301,7 @@
               <item name="zg-php" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Console" type="462c0819:PsiDirectoryNode" />
-              <item name="Commands" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="zg-php" type="b2602c69:ProjectViewProjectNode" />
-              <item name="zg-php" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Console" type="462c0819:PsiDirectoryNode" />
-              <item name="Commands" type="462c0819:PsiDirectoryNode" />
-              <item name="Test" type="462c0819:PsiDirectoryNode" />
+              <item name="Services" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="zg-php" type="b2602c69:ProjectViewProjectNode" />
@@ -299,6 +309,7 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="Services" type="462c0819:PsiDirectoryNode" />
+              <item name="AMQP" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="zg-php" type="b2602c69:ProjectViewProjectNode" />
@@ -316,7 +327,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/app/Services/AMQP" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/app/Mapper" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
@@ -325,6 +336,7 @@
       <recent name="$PROJECT_DIR$/src/app/Console/Commands/Test" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/app/Mapper" />
       <recent name="$PROJECT_DIR$/src/app/Services/AMQP" />
       <recent name="$PROJECT_DIR$/src/app/Console/Commands" />
     </key>
@@ -351,12 +363,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1568631410822</updated>
-      <workItem from="1568631412159" duration="2640000" />
+      <workItem from="1568631412159" duration="3499000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2640000" />
+    <option name="totallyTimeSpent" value="3499000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-378" y="-1152" width="2048" height="1152" extended-state="6" />
@@ -368,10 +380,10 @@
       <window_info anchor="bottom" id="Docker" />
       <window_info anchor="bottom" id="Database Changes" />
       <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Terminal" visible="true" weight="0.18041705" />
+      <window_info anchor="bottom" id="Terminal" weight="0.18041705" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32910246" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -441,20 +453,58 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/Services/Business/TestService.php">
+    <entry file="file://$PROJECT_DIR$/src/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="13" column="1" lean-forward="true" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
+        <state relative-caret-position="744">
+          <caret line="31" column="8" lean-forward="true" selection-start-line="31" selection-start-column="8" selection-end-line="31" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/Mapper/Mapper.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="4" column="10" selection-start-line="4" selection-start-column="10" selection-end-line="4" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/Services/Business/TestConsumeService.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="12" column="5" lean-forward="true" selection-end-line="13" selection-end-column="1" />
           <folding>
             <element signature="e#41#90#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/Support/AMQP/AMQPSendMessageInterface.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="4" column="10" selection-start-line="4" selection-start-column="10" selection-end-line="4" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/Services/Business/TestSendService.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="12" column="1" lean-forward="true" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/Services/AMQP/TestSenderService.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="537">
+          <caret line="46" column="25" lean-forward="true" selection-start-line="46" selection-start-column="7" selection-end-line="46" selection-end-column="25" />
+          <folding>
+            <element signature="e#37#70#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/app/Services/AMQP/TestWorkerService.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="146">
-          <caret line="31" column="5" lean-forward="true" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
+        <state relative-caret-position="549">
+          <caret line="36" column="7" lean-forward="true" selection-start-line="36" selection-start-column="7" selection-end-line="36" selection-end-column="7" />
           <folding>
             <element signature="e#40#83#0#PHP" expanded="true" />
           </folding>
