@@ -229,7 +229,13 @@ class AMQPService
             );
         }
 
-        $results = $service->process($payload);
+        try {
+            $results = $service->process($payload);
+        } catch (Exception $exception)
+        {
+            // TODO: Log exception in message log table.
+        }
+
 
         if (empty($results)) {
             throw new AMQPException(
@@ -275,6 +281,8 @@ class AMQPService
 
                 $message->delivery_info['channel']->basic_ack($message->delivery_info['delivery_tag']);
             } catch (Exception $exception) {
+                // TODO: Log exception in message log table.
+
                 $message->delivery_info['channel']->basic_nack($message->delivery_info['delivery_tag']);
             }
 
