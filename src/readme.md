@@ -1,6 +1,6 @@
-# ZG PHP DEMO API #
+# Laravel API Microservice #
 
-RESTful API for ZG PHP Meetup #97 created with Laravel framework.
+RESTful API as Microservice created with Laravel framework.
 
 ## Dependencies ##
 
@@ -13,8 +13,8 @@ RESTful API for ZG PHP Meetup #97 created with Laravel framework.
 
 Add the following lines to your hosts file:
 
-    127.0.0.1    www.zg-php-demo.local
-    127.0.0.1    g-php-demo.local
+    127.0.0.1    www.demo.local
+    127.0.0.1    demo.local
 
 ### 2. Create environment file ###
 
@@ -32,7 +32,7 @@ Run the following commands in terminal:
 
 ### 4. Create database ###
 
-Create `zg_php_demo_db` database locally. Charset must be set to `utf8mb4` and collation to `utf8mb4_unicode_ci`.
+Create `demo_db` database locally. Charset must be set to `utf8mb4` and collation to `utf8mb4_unicode_ci`.
 
 ### 5. Run database migrations and seeders ###
 
