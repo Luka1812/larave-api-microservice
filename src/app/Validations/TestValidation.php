@@ -1,4 +1,3 @@
-
 <?php
 
 namespace App\Validations;
@@ -27,7 +26,7 @@ class TestValidation extends Validation
     public function errorCodes() : array
     {
         return [
-            'test_field.required'  => TestErrorCode::ERR_EMPTY_TEST_FIELD,
+            'test_field.required'  => TestErrorCode::ERR_EMPTY_TEST_FIELD
         ];
     }
 
